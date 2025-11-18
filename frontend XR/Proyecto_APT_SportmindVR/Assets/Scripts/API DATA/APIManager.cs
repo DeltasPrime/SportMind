@@ -17,8 +17,8 @@ public class APIManager : MonoBehaviour
     private string ApiModifyUrl => $"{apiBaseUrl}/data/modify";
 
     [Header("API Key de AWS (Requerida)")]
-    [Tooltip("API Key hardcodeada en el código para evitar errores de tipeo")]
-    private const string API_KEY = "fyrKCyfgZ98gk6Y53tmBi1Z9fCsXG1U37FUDrCIv";
+    [Tooltip("API Key que se debe configurar desde el Inspector de Unity")]
+    [SerializeField] private string apiKey = "";
     private const string API_KEY_HEADER_NAME = "x-api-key";
 
     [Header("UI Elements - Respuesta Exitosa")]
@@ -123,8 +123,14 @@ public class APIManager : MonoBehaviour
         request.SetRequestHeader("Content-Type", "application/json");
         
         // Agregar API Key (siempre requerida)
-        request.SetRequestHeader(API_KEY_HEADER_NAME, API_KEY);
-        Debug.Log($"[APIManager] API Key enviada: {API_KEY.Substring(0, 10)}...");
+        if (string.IsNullOrEmpty(apiKey))
+        {
+            Debug.LogError("[APIManager] API Key no configurada. Por favor configúrala en el Inspector.");
+            onResponse?.Invoke("Error: API Key no configurada.");
+            yield break;
+        }
+        request.SetRequestHeader(API_KEY_HEADER_NAME, apiKey);
+        Debug.Log($"[APIManager] API Key enviada: {apiKey.Substring(0, Math.Min(10, apiKey.Length))}...");
 
         // 3. Enviar
         yield return request.SendWebRequest();
@@ -151,10 +157,16 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator GetDatesCoroutine(Action<string> onResponse)
     {
+        if (string.IsNullOrEmpty(apiKey))
+        {
+            onResponse?.Invoke("Error: API Key no configurada.");
+            yield break;
+        }
+        
         UnityWebRequest request = UnityWebRequest.Get(ApiDatesUrl);
         
         // Agregar API Key (siempre requerida)
-        request.SetRequestHeader(API_KEY_HEADER_NAME, API_KEY);
+        request.SetRequestHeader(API_KEY_HEADER_NAME, apiKey);
 
         yield return request.SendWebRequest();
 
@@ -170,11 +182,17 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator GetDataByDateCoroutine(string date, Action<string> onResponse)
     {
+        if (string.IsNullOrEmpty(apiKey))
+        {
+            onResponse?.Invoke("Error: API Key no configurada.");
+            yield break;
+        }
+        
         string url = $"{apiBaseUrl}/data/{date}";
         UnityWebRequest request = UnityWebRequest.Get(url);
         
         // Agregar API Key (siempre requerida)
-        request.SetRequestHeader(API_KEY_HEADER_NAME, API_KEY);
+        request.SetRequestHeader(API_KEY_HEADER_NAME, apiKey);
 
         yield return request.SendWebRequest();
 
@@ -190,6 +208,12 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator ModifySessionCoroutine(string date, string sessionId, string additionalDataJson, Action<string> onResponse)
     {
+        if (string.IsNullOrEmpty(apiKey))
+        {
+            onResponse?.Invoke("Error: API Key no configurada.");
+            yield break;
+        }
+        
         // Construir el JSON para modificar
         string modifyJson = $"{{\"date\":\"{date}\",\"session_id\":\"{sessionId}\",\"additional_data\":{additionalDataJson}}}";
 
@@ -202,7 +226,7 @@ public class APIManager : MonoBehaviour
         request.SetRequestHeader("Content-Type", "application/json");
 
         // Agregar API Key (siempre requerida)
-        request.SetRequestHeader(API_KEY_HEADER_NAME, API_KEY);
+        request.SetRequestHeader(API_KEY_HEADER_NAME, apiKey);
 
         yield return request.SendWebRequest();
 
