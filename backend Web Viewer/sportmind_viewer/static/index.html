@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>SportMind Viewer</title>
+	<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+	<header>
+		<h1>SportMind Viewer</h1>
+		<p class="subtitle">Fechas y sesiones guardadas en S3</p>
+	</header>
+
+	<main>
+		<section class="panel">
+			<h2>Fechas disponibles</h2>
+			<div class="controls">
+				<button id="refreshDates">Refrescar</button>
+			</div>
+			<ul id="datesList" class="list"></ul>
+		</section>
+
+		<section class="panel panel-sessions">
+			<h2>Sesiones de <span id="selectedDate">—</span></h2>
+			<div id="sessionsList" class="list"></div>
+		</section>
+	</main>
+
+	<footer>
+		<p>SportMind • Flask + S3</p>
+	</footer>
+
+	<script src="/static/app.js"></script>
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			App.init();
+		});
+	</script>
+</body>
+	</html>
+
+

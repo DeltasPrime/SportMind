@@ -1,0 +1,189 @@
+# =============== #
+# UNITY PROYECTOS #
+# =============== #
+
+# Carpetas generadas automáticamente por Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Lightmapping y bake data
+LightmapSnapshot/
+LightingData.asset
+*.lighting
+*.exr
+
+# Cache de compilación
+SysCache/
+ShaderCache/
+IL2CPPBuildCache/
+ScriptAssemblies/
+*.pidb
+*.mdb
+
+# Archivos de build específicos de plataformas
+*.apk
+*.aab
+*.app
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+*.xcuserdata/
+
+# =============== #
+# UNITY PACKAGES  #
+# =============== #
+
+# Evita subir paquetes descargados del Package Manager
+[Pp]ackages/com.unity.collab-proxy/
+[Pp]ackages/com.unity.testtools.codecoverage/
+[Pp]ackages/com.unity.visualscripting/
+[Pp]ackages/com.unity.xr.*
+
+# Subir solo el manifiesto y lock de paquetes (importante)
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+# =============== #
+# META Y ESCENAS  #
+# =============== #
+
+# Unity usa estos archivos para metadatos (sí deben subirse)
+!*.meta
+!Assets/**/*.meta
+!ProjectSettings/**/*.asset
+
+# =============== #
+# PYTHON / BACKEND #
+# =============== #
+
+# Variables de entorno con credenciales
+.env
+.env.local
+.env.*.local
+
+# Entorno virtual de Python
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Modelos de machine learning (si son muy grandes, descomenta)
+# *.pkl
+# *.h5
+# *.hdf5
+# *.joblib
+
+# =============== #
+# IDEs Y EDITORES #
+# =============== #
+
+# Visual Studio / JetBrains Rider
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.VC.db
+*.VC.opendb
+*.DotSettings.user
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Otros editores
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# =============== #
+# LOGS Y TEMPORALES #
+# =============== #
+
+*.log
+*.stacktrace
+*.bak
+*.tmp
+*.old
+
+# =============== #
+# SISTEMA OPERATIVO #
+# =============== #
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =============== #
+# ARCHIVOS GRANDES #
+# =============== #
+
+# Archivos grandes generados por simulaciones XR o URP
+*.unitypackage
+*.mp4
+*.mov
+*.avi
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =============== #
+# OTROS #
+# =============== #
+
+# Archivos de configuración local
+*.local
+local_settings.py
+local_config.json
