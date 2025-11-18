@@ -11,25 +11,18 @@ para dispositivos **Meta Quest**.
 
 ------------------------------------------------------------------------
 
-## 🚀 Versión Actual --- 3.0 (Sprint 4)
+## 🚀 Versión Actual 3.0 (Sprint 4)
 
 La versión **3.0** consolida todo lo pendiente de las versiones
 anteriores, logrando un producto **completo, funcional y estable**:
 
 ### ✔️ Mejoras Clave
 
--   🔥 **Minijuego Extintor finalizado** con interacción física, VFX
-    dinámico y sistema de progreso.
--   ❤️ **Minijuego RCP completado** con detección de manos, contador
-    preciso y sistema de estrellas.
 -   🧩 **Integración total del PlayerDataStore**, unificando:
-    -   Stars por minijuego\
     -   Tiempos\
     -   Emociones pre/post\
     -   Nombre del jugador y deporte\
     -   Selección de minijuegos\
--   🎬 **Sistema de video-tutoriales** CineManager completamente
-    operativo.
 -   🧭 Flujo completo multi-escena unificado (Intro → Minijuego →
     Resultados → Lobby).
 -   📈 **Integración nativa con AWS** para exportar datos JSON al
@@ -38,7 +31,7 @@ anteriores, logrando un producto **completo, funcional y estable**:
 -   ⚙️ Optimización y estabilidad enfocadas en *Meta Quest 2/3*.
 
 📷 *Vista previa de la versión 3.0:*\
-![v3.0 Screenshot](Assets/Images/v30_preview.png)
+![v3.0 Screenshot](frontend%20XR/Proyecto_APT_SportmindVR/Assets/Assets/Icons/SM_Icons/read_screenshots/v30_preview.png)
 
 ------------------------------------------------------------------------
 
@@ -51,7 +44,7 @@ anteriores, logrando un producto **completo, funcional y estable**:
 -   Música, ambientación y mejoras de rendimiento
 
 📷 *Vista previa:*\
-![v2.5 Screenshot](Assets/Images/v25_preview.png)
+![v2.5 Screenshot](frontend%20XR/Proyecto_APT_SportmindVR/Assets/Assets/Icons/SM_Icons/read_screenshots/v25_preview.png)
 
 ------------------------------------------------------------------------
 
@@ -63,7 +56,7 @@ anteriores, logrando un producto **completo, funcional y estable**:
 -   Navegación entre escenas consolidada
 
 📷 *Vista previa:*\
-![v2.0 Screenshot](Assets/Images/v20_preview.png)
+![v2.0 Screenshot](frontend%20XR/Proyecto_APT_SportmindVR/Assets/Assets/Icons/SM_Icons/read_screenshots/v20_preview.png)
 
 ------------------------------------------------------------------------
 
@@ -76,7 +69,7 @@ anteriores, logrando un producto **completo, funcional y estable**:
 -   Validación técnica de rendimiento
 
 📷 *Vista previa:*\
-![v1.0 Screenshot](Assets/Images/v10_preview.png)
+![v1.0 Screenshot](frontend%20XR/Proyecto_APT_SportmindVR/Assets/Assets/Icons/SM_Icons/read_screenshots/v10_preview.png)
 
 ------------------------------------------------------------------------
 
